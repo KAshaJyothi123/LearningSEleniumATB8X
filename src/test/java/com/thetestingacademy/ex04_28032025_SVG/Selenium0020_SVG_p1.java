@@ -9,16 +9,16 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class Selneium0020_SVG_p1
+public class Selenium0020_SVG_p1
 {
-
+  WebDriver driver;
     @Description("verify that the after search ,result are Visible")
     @Test
 
     public void test_flipkart_search()
     {
 
-        WebDriver driver= new ChromeDriver();
+        driver= new ChromeDriver();
         driver.get("https://www.flipkart.com/");
         driver.manage().window().maximize();
         System.out.println(driver.getTitle());
@@ -37,12 +37,6 @@ public class Selneium0020_SVG_p1
         {
             System.out.println(title.getText());
         }
-
-
-
-
-
-
     }
 
     @AfterTest
@@ -58,6 +52,7 @@ public class Selneium0020_SVG_p1
         }
 
 
+        driver.quit();
     }
 
 }
